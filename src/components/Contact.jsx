@@ -1,26 +1,41 @@
-import React from 'react'
+import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    marginBottom: 100,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+});
 
 const Contact = () => {
+  const classes = useStyles();
+
   return (
-    <div>
+    <div className={classes.root}>
       <Typography variant="h5" gutterBottom>
-          Contact
-        </Typography>
-      <IconButton aria-label="go to github" href="#">
+        Contact
+      </Typography>
+      <div>
+        <IconButton aria-label="go to github" href="#">
           <GitHubIcon />
         </IconButton>
         <IconButton aria-label="go to project" href="#">
-          <ExitToAppIcon />
+          <LinkedInIcon />
         </IconButton>
         <IconButton aria-label="go to project" href="#">
-          <ExitToAppIcon />
+          <EmailIcon />
         </IconButton>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

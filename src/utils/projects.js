@@ -20,8 +20,40 @@ const projects = [
     technologies: [
       'html', 'css', 'js', 'react', 'node', 'go'
     ]
-  }
-
+  },
+  {
+    name: 'Project2',
+    description: 'This is the description of the project 2 dslkdlsdlslkslldkslslsldksljflsfjlsdklksdlk',
+    img: './images/face1.jpg',
+    urlGit:'https://www.nba.com/',
+    urlProject:'https://www.espn.com/',
+    category: 'web2',
+    technologies: [
+      'html', 'css', 'js', 'react', 'node', 'go'
+    ]
+  },
+  {
+    name: 'Project2',
+    description: 'This is the description of the project 2 dslkdlsdlslkslldkslslsldksljflsfjlsdklksdlk',
+    img: './images/face1.jpg',
+    urlGit:'https://www.nba.com/',
+    urlProject:'https://www.espn.com/',
+    category: 'web2',
+    technologies: [
+      'html', 'css', 'js', 'react', 'node', 'go'
+    ]
+  },
+  {
+    name: 'Project2',
+    description: 'This is the description of the project 2 dslkdlsdlslkslldkslslsldksljflsfjlsdklksdlk',
+    img: './images/face1.jpg',
+    urlGit:'https://www.nba.com/',
+    urlProject:'https://www.espn.com/',
+    category: 'web2',
+    technologies: [
+      'html', 'css', 'js', 'react', 'node', 'go'
+    ]
+  },
 ]
 
 

@@ -8,6 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@material-ui/core/Button";
+import NoSsr from "@material-ui/core/NoSsr";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,16 +21,19 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  fullMenu: {
+    color: theme.palette.common.white
+  }
+
 }));
 
 const Header = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  console.log(isMobile);
+  // console.log(isMobile);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -40,57 +44,59 @@ const Header = () => {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Photos
-          </Typography>
-          <div>
-            {isMobile ? (
-              <>
-                <IconButton
-                  edge="start"
-                  className={classes.menuButton}
-                  onClick={handleMenu}
-                  color="inherit"
-                  aria-label="menu"
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={open}
-                  onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>About Me</MenuItem>
-                  <MenuItem onClick={handleClose}>Skills</MenuItem>
-                  <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-                  <MenuItem onClick={handleClose}>Contact</MenuItem>
-                </Menu>
-              </>
-            ) : (
-            <>
-              <Button onClick={handleMenu}>About Me</Button>
-              <Button  href="#">Skills</Button>
-              <Button onClick={handleMenu}>Portfolio</Button>
-              <Button onClick={handleMenu}>Contact</Button>
-              </>
-            )}
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <NoSsr>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h4" className={classes.title}>
+              {'</CA>'}
+            </Typography>
+            <div>
+              {isMobile ? (
+                <div>
+                  <IconButton
+                    edge="start"
+                    className={classes.menuButton}
+                    onClick={handleMenu}
+                    color="inherit"
+                    aria-label="menu"
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    open={open}
+                    onClose={handleClose}
+                  >
+                    <MenuItem onClick={handleClose}>Sobre Mi</MenuItem>
+                    <MenuItem onClick={handleClose}>Habilidades</MenuItem>
+                    <MenuItem onClick={handleClose}>Portafolio</MenuItem>
+                    <MenuItem onClick={handleClose}>Contacto</MenuItem>
+                  </Menu>
+                </div>
+              ) : (
+                <div>
+                  <Button onClick={handleMenu} className={classes.fullMenu}>Sobre Mi</Button>
+                  <Button href="#" className={classes.fullMenu}>Habilidades</Button>
+                  <Button onClick={handleMenu} className={classes.fullMenu}>Portafolio</Button>
+                  <Button onClick={handleMenu} className={classes.fullMenu}>Contacto</Button>
+                </div>
+              )}
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    </NoSsr>
   );
 };
 
