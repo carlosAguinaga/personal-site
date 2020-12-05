@@ -6,15 +6,19 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import GitHubIcon from "@material-ui/icons/GitHub";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 // import theme from '../themeConfig';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 300,
-    maxWidth: 300,
+    // minWidth: 250,
+    // maxWidth: 320,
+    width: 320,
+    minHeight: 500,
     marginBlockStart: 20,
+    marginBlockEnd: 20,
+    position: 'relative',
   },
   media: {
     height: 0,
@@ -31,15 +35,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px 12px 6px 0px",
     padding: "0 10px",
   },
+  share: {
+    position: 'absolute',
+    bottom: 0,
+  },
 }));
 
 const CardComponet = ({ project }) => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
     <Card className={classes.root}>
@@ -63,14 +66,14 @@ const CardComponet = ({ project }) => {
           </div>
         ))}
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="go to github" href={project.urlGit}>
-          <GitHubIcon />
-        </IconButton>
-        <IconButton aria-label="go to project" href={project.urlProject}>
-          <ExitToAppIcon />
-        </IconButton>
-      </CardActions>
+        <CardActions disableSpacing className={classes.share}>
+          <IconButton aria-label="go to github" href={project.urlGit}>
+            <GitHubIcon />
+          </IconButton>
+          <IconButton aria-label="go to project" href={project.urlProject}>
+            <ExitToAppIcon />
+          </IconButton>
+        </CardActions>
     </Card>
   );
 };

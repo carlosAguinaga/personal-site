@@ -13,30 +13,29 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   cardsContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  cardsContainerTable: {
-    display: 'grid',
-    gridTemplateColumns: '33% 33%',
-    backgroundColor: 'red',
-  },
-  // cardsContainerTable: {
-  //   display: "flex",
-  //   flexWrap: "wrap",
-  //   backgroundColor: "red",
-  //   justifyContent: "space-between",
-  //   "&:after": {
-  //     content: '""',
-  //     flex: 'auto',
-  //   },
-  // },
-  cardsContainerDesk: {
-    display: "flex",
-    flexWrap: "wrap",
-    backgroundColor: "green",
+    [theme.breakpoints.up("xs")]: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    [theme.breakpoints.up("sm")]: {
+      backgroundColor: theme.palette.secondary.main,
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 30,
+      justifyItems: "center",
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.secondary.main,
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+      justifyItems: "center",
+    },
+    [theme.breakpoints.up("lg")]: {
+      backgroundColor: "yellow",
+    },
   },
 }));
 
@@ -52,15 +51,7 @@ const Projects = () => {
       <Typography variant="h5" className={classes.title} gutterBottom>
         Projects
       </Typography>
-      <div
-        className={
-          istDesk
-            ? classes.cardsContainerDesk
-            : istTablet
-            ? classes.cardsContainerTable
-            : classes.cardsContainer
-        }
-      >
+      <div className={classes.cardsContainer}>
         {projects.map((pro, index) => (
           <CardComponet project={pro} key={index} />
         ))}
