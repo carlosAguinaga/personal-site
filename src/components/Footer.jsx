@@ -3,10 +3,10 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    color: 'white',
-    backgroundColor: 'black',
+    color: theme.palette.common.white,
+    backgroundColor: theme.palette.common.black,
     height: 50,
     display: 'flex',
     flexGrow: 'grow',
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   typography: {
     textAlign: 'center',
   }
-});
+}));
 
 const Footer = () => {
 
@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <Typography variant="caption" gutterBottom>
-        ©Footer
+        ©Carlos Aguinaga
       </Typography>
     </div>
   );

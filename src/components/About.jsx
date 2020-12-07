@@ -1,42 +1,63 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
+import { makeStyles } from "@material-ui/core/styles";
+import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginBottom: 100
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: 70,
   },
   avatar: {
     width: theme.spacing(17),
     height: theme.spacing(17),
-    border: '3px solid',
+    border: "3px solid",
     borderColor: theme.palette.primary.main,
     marginTop: 20,
-    marginBottom:10,
+    marginBottom: 10,
   },
   title: {
-    marginBottom: 30,
-  }
+    marginBottom: 20,
+    color: theme.palette.primary.main,
+  },
+  subTitle: {
+    [theme.breakpoints.up("xs")]: {
+      // maxWidth: "80%",
+    },
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "70%",
+    },
+  },
 }));
 
-const About = ( ) => {
-
+const About = () => {
   const classes = useStyles();
 
   return (
-
     <div className={classes.root} id="about">
-      <Avatar alt="Remy Sharp" src="./images/face1.jpg" className={classes.avatar} color="primary"/>
-      <Typography variant="h5" gutterBottom color="textPrimary" className={classes.title}>
+      <Avatar
+        alt="Remy Sharp"
+        src="./images/face1.jpg"
+        className={classes.avatar}
+        color="primary"
+      />
+      <Typography
+        variant="h4"
+        gutterBottom
+        color="textPrimary"
+        className={classes.title}
+      >
         Carlos Aguinaga
       </Typography>
-      <Typography variant="body2" color="textSecondary" component="p" >
-       Developer pasionate for make grat projects and meny tecnologies, want tu
-        relise new works
+      <Typography
+        variant="h6"
+        color="textSecondary"
+        gutterBottom
+        className={classes.subTitle}
+      >
+        Soy un desarrollador web y mobile entusiasta por la tecnología. 
       </Typography>
     </div>
   );

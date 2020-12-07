@@ -8,12 +8,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-// import theme from '../themeConfig';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // minWidth: 250,
-    // maxWidth: 320,
     width: 320,
     minHeight: 500,
     marginBlockStart: 20,
@@ -26,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   containerInsignia: {
     display: "flex",
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.light,
     flexWrap: "wrap",
   },
   insignia: {
@@ -38,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
   share: {
     position: 'absolute',
     bottom: 0,
+    color: theme.palette.primary.light,
+  },
+  icon: {
+    color: theme.palette.text.primary,
   },
 }));
 
@@ -49,7 +50,7 @@ const CardComponet = ({ project }) => {
       <CardMedia
         className={classes.media}
         image={project.img}
-        title="project"
+        title={project.name}
       />
       <CardContent>
         <Typography variant="h5" gutterBottom>
@@ -60,18 +61,18 @@ const CardComponet = ({ project }) => {
         </Typography>
       </CardContent>
       <CardContent className={classes.containerInsignia}>
-        {project.technologies.map((el, index) => (
+        {project.technologies.map((insignia, index) => (
           <div className={classes.insignia} key={index}>
-            <span>{el}</span>
+            <span>{insignia}</span>
           </div>
         ))}
       </CardContent>
         <CardActions disableSpacing className={classes.share}>
           <IconButton aria-label="go to github" href={project.urlGit}>
-            <GitHubIcon />
+            <GitHubIcon className={classes.icon}/>
           </IconButton>
           <IconButton aria-label="go to project" href={project.urlProject}>
-            <ExitToAppIcon />
+            <ExitToAppIcon className={classes.icon}/>
           </IconButton>
         </CardActions>
     </Card>

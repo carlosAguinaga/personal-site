@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gap: 20,
+      gridColumnGap: 80,
     },
   },
   title: {
-    marginBottom: 20,
+    marginBottom: 40,
     textAlign: "center",
   },
   slider: {
@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CustomSlider = withStyles((theme) => ({
-  disabled: {
-    //  color: 'red',
-  },
   thumb: {
     color: theme.palette.primary.main,
   },
@@ -44,12 +41,12 @@ const Skills = () => {
   return (
     <div className={classes.root} id="skills">
       <Typography variant="h5" gutterBottom className={classes.title}>
-        Skills
+        Habilidades
       </Typography>
 
       <div className={classes.skill}>
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             HTML
           </Typography>
           <CustomSlider
@@ -61,7 +58,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             CSS
           </Typography>
           <CustomSlider
@@ -73,7 +70,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             Javascript
           </Typography>
           <CustomSlider
@@ -85,7 +82,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             React
           </Typography>
           <CustomSlider
@@ -97,7 +94,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             Android
           </Typography>
           <CustomSlider
@@ -109,7 +106,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             Node
           </Typography>
           <CustomSlider
@@ -121,7 +118,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <Typography id="disabled-slider" gutterBottom>
+          <Typography gutterBottom>
             Figma
           </Typography>
           <CustomSlider

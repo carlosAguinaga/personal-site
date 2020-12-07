@@ -55,7 +55,7 @@ const Header = () => {
       <div className={classes.root}>
         <AppBar position="static" >
           <Toolbar className={classes.toolbar}>
-            <Typography variant="h4" className={classes.title}>
+            <Typography variant="h4" className={classes.title} >
               {'</CA>'}
             </Typography>
             <div>

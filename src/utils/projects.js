@@ -25,6 +25,18 @@ const projects = [
   },
   {
     name: 'Project2-web',
+    description: 'This is the description of the project 2 dslkdlsdl slkslldkslslsldkslj flsfjlsdklksdlk',
+    img: './images/face1.jpg',
+    urlGit:'https://www.nba.com/',
+    urlProject:'https://www.espn.com/',
+    categoryName: 'web',
+    categoryId: 0,
+    technologies: [
+      'html', 'css', 'js', 'react', 'node', 'go', 'css', 'js', 'react', 'node', 'go', 'css', 'js', 'react', 'node', 'go'
+    ]
+  },
+  {
+    name: 'Project2-web',
     description: 'This is the description of the project 2 dslkdlsdlsl kslldkslslsldkslj flsfjlsdklksdlk',
     img: './images/face1.jpg',
     urlGit:'https://www.nba.com/',
