@@ -29,7 +29,7 @@ const About = ( ) => {
 
   return (
 
-    <div className={classes.root}>
+    <div className={classes.root} id="about">
       <Avatar alt="Remy Sharp" src="./images/face1.jpg" className={classes.avatar} color="primary"/>
       <Typography variant="h5" gutterBottom color="textPrimary" className={classes.title}>
         Carlos Aguinaga

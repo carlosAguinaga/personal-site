@@ -60,8 +60,8 @@ const CardComponet = ({ project }) => {
         </Typography>
       </CardContent>
       <CardContent className={classes.containerInsignia}>
-        {project.technologies.map((el) => (
-          <div className={classes.insignia} key={el}>
+        {project.technologies.map((el, index) => (
+          <div className={classes.insignia} key={index}>
             <span>{el}</span>
           </div>
         ))}

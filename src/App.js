@@ -14,19 +14,19 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     [theme.breakpoints.up("xs")]: {
       padding: 25,
-      backgroundColor: 'red',
+      // backgroundColor: 'red',
     },
     [theme.breakpoints.up("sm")]: {
       padding: 25,
-      backgroundColor: theme.palette.secondary.main,
+      // backgroundColor: theme.palette.secondary.main,
     },
     [theme.breakpoints.up("md")]: {
       width: '80%',
       margin: '0 auto',
-      backgroundColor: theme.palette.primary.main,
+      // backgroundColor: theme.palette.primary.main,
     },
     [theme.breakpoints.up("lg")]: {
-      backgroundColor: "yellow",
+      // backgroundColor: "yellow",
     },
   },
 }));

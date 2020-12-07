@@ -9,12 +9,19 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@material-ui/core/Button";
 import NoSsr from "@material-ui/core/NoSsr";
+import Link from '@material-ui/core/Link';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
+    //
+  },
+  toolbar:{
+    [theme.breakpoints.up('lg')]:{
+      width: '80%',
+      margin: '0 auto',
+    }
   },
   menuButton: {
     marginRight: theme.spacing(0),
@@ -34,7 +41,6 @@ const Header = () => {
   const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  // console.log(isMobile);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -47,8 +53,8 @@ const Header = () => {
   return (
     <NoSsr>
       <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
+        <AppBar position="static" >
+          <Toolbar className={classes.toolbar}>
             <Typography variant="h4" className={classes.title}>
               {'</CA>'}
             </Typography>
@@ -79,18 +85,19 @@ const Header = () => {
                     open={open}
                     onClose={handleClose}
                   >
-                    <MenuItem onClick={handleClose}>Sobre Mi</MenuItem>
-                    <MenuItem onClick={handleClose}>Habilidades</MenuItem>
-                    <MenuItem onClick={handleClose}>Portafolio</MenuItem>
-                    <MenuItem onClick={handleClose}>Contacto</MenuItem>
+                    {/* <MenuItem onClick={handleClose}>Sobre Mi</MenuItem> */}
+                    <MenuItem component={Link} href="#about" onClick={handleClose}>Sobre Mi</MenuItem>
+                    <MenuItem component={Link} href="#portafolio" onClick={handleClose}>Portafolio</MenuItem>
+                    <MenuItem component={Link} href="#skills" onClick={handleClose}>Habilidades</MenuItem>
+                    <MenuItem component={Link} href="#contacto" onClick={handleClose}>Contacto</MenuItem>
                   </Menu>
                 </div>
               ) : (
                 <div>
-                  <Button onClick={handleMenu} className={classes.fullMenu}>Sobre Mi</Button>
-                  <Button href="#" className={classes.fullMenu}>Habilidades</Button>
-                  <Button onClick={handleMenu} className={classes.fullMenu}>Portafolio</Button>
-                  <Button onClick={handleMenu} className={classes.fullMenu}>Contacto</Button>
+                  <Button href="#about" className={classes.fullMenu}>Sobre Mi</Button>
+                  <Button href="#portafolio" className={classes.fullMenu}>Portafolio</Button>
+                  <Button href="#skills" className={classes.fullMenu}>Habilidades</Button>
+                  <Button href="#contacto" className={classes.fullMenu}>Contacto</Button>
                 </div>
               )}
             </div>

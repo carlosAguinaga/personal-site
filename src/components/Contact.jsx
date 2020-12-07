@@ -19,7 +19,7 @@ const Contact = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="contacto">
       <Typography variant="h5" gutterBottom>
         Contact
       </Typography>
