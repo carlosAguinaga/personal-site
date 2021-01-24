@@ -39,7 +39,7 @@ const About = () => {
     <div className={classes.root} id="about">
       <Avatar
         alt="Remy Sharp"
-        src="./images/face1.jpg"
+        src="./images/avatar.jpeg"
         className={classes.avatar}
         color="primary"
       />
@@ -57,7 +57,7 @@ const About = () => {
         gutterBottom
         className={classes.subTitle}
       >
-        Soy un desarrollador web y mobile entusiasta por la tecnología. 
+        Desarrollador de productos digitales en plataformas web y móvil.
       </Typography>
     </div>
   );

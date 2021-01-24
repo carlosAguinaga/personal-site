@@ -68,10 +68,13 @@ const CardComponet = ({ project }) => {
         ))}
       </CardContent>
         <CardActions disableSpacing className={classes.share}>
-          <IconButton aria-label="go to github" href={project.urlGit}>
+          {project.urlGit &&
+            <IconButton aria-label="go to github" href={project.urlGit} target="_blank">
             <GitHubIcon className={classes.icon}/>
           </IconButton>
-          <IconButton aria-label="go to project" href={project.urlProject}>
+          }
+          
+          <IconButton aria-label="go to project" href={project.urlProject} target="_blank">
             <ExitToAppIcon className={classes.icon}/>
           </IconButton>
         </CardActions>
