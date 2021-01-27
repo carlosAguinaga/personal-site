@@ -51,7 +51,7 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={70}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
@@ -63,7 +63,7 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={60}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
@@ -87,7 +87,31 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={80}
+            aria-labelledby="disabled-slider"
+            className={classes.slider}
+          />
+        </div>
+
+        <div>
+          <Typography gutterBottom>
+            React Native
+          </Typography>
+          <CustomSlider
+            disabled
+            defaultValue={60}
+            aria-labelledby="disabled-slider"
+            className={classes.slider}
+          />
+        </div>
+
+        <div>
+          <Typography gutterBottom>
+            Angular
+          </Typography>
+          <CustomSlider
+            disabled
+            defaultValue={40}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
@@ -99,7 +123,31 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={70}
+            aria-labelledby="disabled-slider"
+            className={classes.slider}
+          />
+        </div>
+
+        <div>
+          <Typography gutterBottom>
+            Java
+          </Typography>
+          <CustomSlider
+            disabled
+            defaultValue={45}
+            aria-labelledby="disabled-slider"
+            className={classes.slider}
+          />
+        </div>
+
+        <div>
+          <Typography gutterBottom>
+            SQL
+          </Typography>
+          <CustomSlider
+            disabled
+            defaultValue={50}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
@@ -111,7 +159,7 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={50}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
@@ -123,7 +171,18 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={90}
+            defaultValue={60}
+            aria-labelledby="disabled-slider"
+            className={classes.slider}
+          />
+        </div>
+        <div>
+          <Typography gutterBottom>
+            Firebase
+          </Typography>
+          <CustomSlider
+            disabled
+            defaultValue={70}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />

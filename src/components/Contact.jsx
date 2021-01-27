@@ -30,12 +30,14 @@ const Contact = () => {
         <IconButton
           aria-label="Go to GitHub"
           href="https://github.com/carlosAguinaga"
+          target="_blanck"
         >
           <GitHubIcon className={classes.icon} />
         </IconButton>
         <IconButton
           aria-label="Go to LinkedIn"
           href="https://www.linkedin.com/in/carlos-aguinaga-salinas-7a67b8187/"
+          target="_blanck"
         >
           <LinkedInIcon className={classes.icon} />
         </IconButton>

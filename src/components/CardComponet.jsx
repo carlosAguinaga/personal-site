@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from '@material-ui/core/CardActionArea';
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 500,
     marginBlockStart: 20,
     marginBlockEnd: 20,
-    position: 'relative',
+    position: "relative",
   },
   media: {
     height: 0,
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 10px",
   },
   share: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     color: theme.palette.primary.light,
   },
@@ -47,11 +48,14 @@ const CardComponet = ({ project }) => {
 
   return (
     <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={project.img}
-        title={project.name}
-      />
+      <CardActionArea href={project.urlProject} target="_blank">
+        <CardMedia
+          className={classes.media}
+          image={project.img}
+          title={project.name}
+        />
+      </CardActionArea>
+
       <CardContent>
         <Typography variant="h5" gutterBottom>
           {project.name}
@@ -67,17 +71,25 @@ const CardComponet = ({ project }) => {
           </div>
         ))}
       </CardContent>
-        <CardActions disableSpacing className={classes.share}>
-          {project.urlGit &&
-            <IconButton aria-label="go to github" href={project.urlGit} target="_blank">
-            <GitHubIcon className={classes.icon}/>
+      <CardActions disableSpacing className={classes.share}>
+        {project.urlGit && (
+          <IconButton
+            aria-label="go to github"
+            href={project.urlGit}
+            target="_blank"
+          >
+            <GitHubIcon className={classes.icon} />
           </IconButton>
-          }
-          
-          <IconButton aria-label="go to project" href={project.urlProject} target="_blank">
-            <ExitToAppIcon className={classes.icon}/>
-          </IconButton>
-        </CardActions>
+        )}
+
+        <IconButton
+          aria-label="go to project"
+          href={project.urlProject}
+          target="_blank"
+        >
+          <ExitToAppIcon className={classes.icon} />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 };
