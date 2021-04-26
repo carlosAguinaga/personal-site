@@ -12,6 +12,18 @@ const projects = [
     ]
   },
   {
+    name: 'Tasks To-Do',
+    description: 'Tasks To-Do es una full-stack app que nos sirve para organizar mejor nustros pendientes, este proyecto fue desaroolado con tecnologias de Javascript como NodeJS y React',
+    img: './images/tasks.png',
+    urlGit:'https://github.com/carlosAguinaga/react-to-do',
+    urlProject:'https://react-to-do-bice.vercel.app',
+    categoryName: 'web',
+    categoryId: 0,
+    technologies: [
+      'react', 'nodeJS', 'mongoDB', 'bootstrap'
+    ]
+  },
+  {
     name: 'Cientifico SPA',
     description: 'Científico app es un SPA desarrollado con Javascript puro, sin la intervención de ninguna librería fronted.',
     img: './images/cientifico.png',
@@ -116,7 +128,7 @@ const projects = [
     categoryName: 'ui',
     categoryId: 2,
     technologies: [
-      'html', 'css', 'js', 'react', 'node', 'go'
+      'figma'
     ]
   },
   {
@@ -128,7 +140,7 @@ const projects = [
     categoryName: 'ui',
     categoryId: 2,
     technologies: [
-      'html', 'css', 'js', 'react', 'node', 'go'
+      'figma'
     ]
   },
 ]
