@@ -12,8 +12,20 @@ const projects = [
     ]
   },
   {
+    name: 'Petsgram',
+    description: 'Petsgram es un clon de Instagram para nuestras mascotas',
+    img: './images/pets.png',
+    urlGit:'https://github.com/carlosAguinaga/pets-two',
+    urlProject:'https://pets-two.vercel.app/',
+    categoryName: 'web',
+    categoryId: 0,
+    technologies: [
+      'react', 'css'
+    ]
+  },
+  {
     name: 'Tasks To-Do',
-    description: 'Tasks To-Do es una full-stack app que nos sirve para organizar mejor nustros pendientes, este proyecto fue desaroolado con tecnologias de Javascript como NodeJS y React',
+    description: 'Tasks To-Do es una full-stack app que nos sirve para organizar mejor nuestros pendientes, este proyecto fue desarrollado con tecnologías de Javascript como NodeJS y React',
     img: './images/tasks.png',
     urlGit:'https://github.com/carlosAguinaga/react-to-do',
     urlProject:'https://react-to-do-bice.vercel.app',
@@ -33,18 +45,6 @@ const projects = [
     categoryId: 0,
     technologies: [
       'html', 'css', 'js', 'webpack'
-    ]
-  },
-  {
-    name: 'Gif Expert App',
-    description: 'Gift Expert es un buscador de gifs que hace uso del api de de GIPHY para obtener los gifs de la categoría seleccionada.',
-    img: './images/gifexpert.png',
-    urlGit:'https://github.com/carlosAguinaga/react-gifexpertapp',
-    urlProject:'https://carlosaguinaga.github.io/react-gifexpertapp',
-    categoryName: 'web',
-    categoryId: 0,
-    technologies: [
-      'html', 'css', 'js', 'react'
     ]
   },
   {
@@ -69,6 +69,18 @@ const projects = [
     categoryId: 0,
     technologies: [
       'html', 'css', 'js', 'angular', 'bootstrap'
+    ]
+  },
+  {
+    name: 'Gif Expert App',
+    description: 'Gift Expert es un buscador de gifs que hace uso del api de GIPHY para obtener los gifs de la categoría seleccionada.',
+    img: './images/gifexpert.png',
+    urlGit:'https://github.com/carlosAguinaga/react-gifexpertapp',
+    urlProject:'https://carlosaguinaga.github.io/react-gifexpertapp',
+    categoryName: 'web',
+    categoryId: 0,
+    technologies: [
+      'html', 'css', 'js', 'react'
     ]
   },
   {

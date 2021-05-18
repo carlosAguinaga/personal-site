@@ -159,7 +159,7 @@ const Skills = () => {
           </Typography>
           <CustomSlider
             disabled
-            defaultValue={50}
+            defaultValue={70}
             aria-labelledby="disabled-slider"
             className={classes.slider}
           />
