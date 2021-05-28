@@ -12,11 +12,23 @@ const projects = [
     ]
   },
   {
+    name: 'Digital Apps',
+    description: 'Digital Apps es una página institucional demo muy ligera y minimalista.',
+    img: './images/digital.png',
+    urlGit:'https://github.com/carlosAguinaga/Layout-with-sass',
+    urlProject:'https://carlosaguinaga.github.io/Layout-with-sass',
+    categoryName: 'web',
+    categoryId: 0,
+    technologies: [
+      'html', 'sass', 'js'
+    ]
+  },
+  {
     name: 'Petsgram',
     description: 'Petsgram es un clon de Instagram para nuestras mascotas',
     img: './images/pets.png',
     urlGit:'https://github.com/carlosAguinaga/pets-two',
-    urlProject:'https://pets-two.vercel.app/',
+    urlProject:'https://pets-two.vercel.app',
     categoryName: 'web',
     categoryId: 0,
     technologies: [
